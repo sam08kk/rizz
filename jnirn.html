@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angels Page</title>
+    <style>
+        body {
+            background-color: yellow;
+            text-align: center;
+            padding: 50px;
+            position: relative;
+        }
+
+        h1 {
+            color: red;
+        }
+
+        .heart {
+            color: red;
+            font-size: 24px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1>Angels like you cannot go ahead!</h1>
+    <h2>sorry, you are a 10 hence can not proceed to see the content
+   <!-- JavaScript to generate and position 30 hearts dynamically -->
+<script>
+    for (let i = 0; i < 30; i++) {
+        createHeart();
+    }
+
+    function createHeart() {
+        const heart = document.createElement('div');
+        heart.innerHTML = '❤️'; // Unicode for the heart symbol
+        heart.className = 'heart';
+
+        // Set random position within the document
+        const randomX = Math.random() * 100;
+        const randomY = Math.random() * 100;
+
+        heart.style.top = `${randomY}vh`;
+        heart.style.left = `${randomX}vw`;
+
+        document.body.appendChild(heart);
+    }
+</script>
+
+</body>
+</html>
